@@ -1,10 +1,15 @@
 "use client"
 import { Button } from "../ui/button"
-import { Terminal, Sun, Moon } from "lucide-react"
+import { Terminal, Sun, Moon, Divide } from "lucide-react"
 import { useTheme } from "next-themes"
+import { useEffect, useState } from "react"
 
 export default function Header() {
-const { theme ,setTheme } = useTheme()
+const { resolvedTheme, setTheme } = useTheme()
+const [ isMounted, setMounted ] = useState(false)
+useEffect(() => {
+    setMounted(true)
+},[])
     return(
         <>
             <nav className="flex items-center bg-background text-foreground font-fira font-medium">
@@ -13,7 +18,7 @@ const { theme ,setTheme } = useTheme()
                     <span>Selim Can Aydin</span>
                 </div>
                 <div className="ml-auto pt-4">
-                    <ul className="flex gap-4">
+                    <ul className="flex gap-7">
                         <li>
                             <span>ABOUT</span>
                         </li>
@@ -30,8 +35,14 @@ const { theme ,setTheme } = useTheme()
                 </div>
                 <div className="pt-4 ml-auto mr-4 flex gap-4 items-center">
                     
-                    <button><Sun/></button>
-                    <Button className="">{'<Contact />'}</Button>
+                    <button onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
+                        {!isMounted ? (
+                            <div className="w-6 h-6"></div> 
+                            ) : (
+                            resolvedTheme === "dark" ? <Sun /> : <Moon />
+                            )}
+                    </button>
+                    <Button>{'<Contact />'}</Button>
                     
                 </div>
             </nav>
