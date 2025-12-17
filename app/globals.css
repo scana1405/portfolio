@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-bounce-card: var(--bounce-card);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -51,7 +52,7 @@
 /* LIGHT MODE RENKLERİ */
 :root {
   --radius: 0.625rem;
-  
+  --bounce-card: white;
   /* Zemin: Çok hafif gri/beyaz */
   --background: #f8fafc; 
   /* Yazılar: Koyu Lacivert/Siyah (Okunabilirlik için) */
@@ -88,7 +89,7 @@
 
   /* Grafik renkleri (Opsiyonel) */
   --chart-1: #5552e4;
-  --chart-2: #2a9d8f;
+  --chart-2: #aeadf5;
   --chart-3: #e9c46a;
   --chart-4: #f4a261;
   --chart-5: #e76f51;
@@ -112,6 +113,7 @@
   --foreground: #f8fafc; 
 
   /* Kartlar: Zeminden bir tık daha açık bir lacivert */
+  --bounce-card: #374151;
   --card: #0f111f; 
   --card-foreground: #f8fafc;
 
@@ -142,7 +144,7 @@
   --ring: #5c59f0;
 
   --chart-1: #5c59f0;
-  --chart-2: #2dd4bf;
+  --chart-2: #aeadf5;
   --chart-3: #facc15;
   --chart-4: #fb923c;
   --chart-5: #f87171;

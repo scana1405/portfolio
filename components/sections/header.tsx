@@ -2,6 +2,7 @@
 import { Button } from "../ui/button"
 import { Terminal, Sun, Moon, Divide } from "lucide-react"
 import { useTheme } from "next-themes"
+import  Typewriter from "typewriter-effect"
 import { useEffect, useState } from "react"
 
 export default function Header() {
@@ -12,10 +13,20 @@ useEffect(() => {
 },[])
     return(
         <>
-            <nav className="flex items-center bg-background text-foreground font-fira font-medium">
+            <nav className="flex items-center bg-background text-foreground font-fira font-medium dark:bg-gray-900/80 backdrop-blur-md dark:border-gray-800 ">
                 <div className="flex gap-4 ml-4 pt-4 ">
                     <span><Terminal /></span>
-                    <span>Selim Can Aydin</span>
+                    <span>
+                    <Typewriter
+                        onInit={(typewriter) => {
+                        typewriter.typeString('Hey!')
+                        .pauseFor(2500)
+                        .deleteAll()
+                        .typeString('Selim Can Aydin')
+                        .start();
+                        }}
+                        />
+                    </span>
                 </div>
                 <div className="ml-auto pt-4">
                     <ul className="flex gap-7">
