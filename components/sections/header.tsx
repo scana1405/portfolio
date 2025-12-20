@@ -13,7 +13,7 @@ useEffect(() => {
 },[])
     return(
         <>
-            <nav className="flex items-center bg-background text-foreground font-fira font-medium dark:bg-gray-900/80 backdrop-blur-md dark:border-gray-800 ">
+            <nav className="flex top-0 z-50 sticky items-center bg-background text-foreground font-fira font-medium dark:bg-gray-900/80 backdrop-blur-md dark:border-gray-800  pb-3">
                 <div className="flex gap-4 ml-4 pt-4 ">
                     <span><Terminal /></span>
                     <span>

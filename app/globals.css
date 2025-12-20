@@ -40,6 +40,12 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-card-background: var(--card-background);
+  --color-primary-text: var(--primary-text);
+  --color-secondary-text: var(--secondary-text);
+  --color-tag-background: var(--tag-background);
+  --color-tag-border: var(--tag-border);
+  --color-stack-section-background: var(--stack-section-background);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,12 +68,22 @@
   --card: #ffffff;
   --card-foreground: #0f172a;
 
+
   --popover: #ffffff;
   --popover-foreground: #0f172a;
 
   /* ANA RENK: Tasarımındaki o canlı mor/indigo */
   --primary: #5552e4; 
   --primary-foreground: #ffffff; /* Buton üzerindeki yazı beyaz */
+
+  /* Tech Stack Section Background */
+  --stack-section-background: #f3f4f6;
+  --card-background: #FFFFFF;
+  --primary-text: #0F172A;
+  --secondary-text: #475569;
+  --tag-background: #F8FAFC;
+  --tag-border: #E2E8F0;
+
 
   /* İkincil: Daha soft alanlar için */
   --secondary: #f1f5f9;
@@ -116,6 +132,15 @@
   --bounce-card: #374151;
   --card: #0f111f; 
   --card-foreground: #f8fafc;
+
+  /* Tech Stack Section Background */
+  --stack-section-background: #111827;
+  --card-background: #151B28;
+  --primary-text: #FFFFFF;
+  --secondary-text: #CBD5E1;
+  --tag-background: #2A3241;
+  --tag-border: #4b5563;
+  
 
   --popover: #0f111f;
   --popover-foreground: #f8fafc;
